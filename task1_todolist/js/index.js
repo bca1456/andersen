@@ -1,8 +1,18 @@
-var outputTaskList = document.getElementById("outputTaskList"); //лист, в который выводим таски
+(function () {
+    window.onload = initTodoList;
+
+    function initTodoList() {
+        domBuilderIndex.init();
+    }
+})();
+
+
+/*var outputTaskList = document.getElementById("outputTaskList"); //лист, в который выводим таски
 var elementsOfOutputList = document.getElementsByClassName("myTasks"); //элементы листа
+var inputTaskText = document.getElementById("inputTaskText"); //текст из инпута
 
 function readInput(){ //считывание таска из input
-    var newTask = document.getElementById("inputTaskText").value;
+    var newTask = inputTaskText.value;
     if (newTask.length < 1){
         return;
     } else {
@@ -22,4 +32,4 @@ function addTaskToList(text){ //добавление новых тасков в 
         div.onclick = removeTaskFromList; //удаление
 
     outputTaskList.appendChild(div);
-}
+}*/
